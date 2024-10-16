@@ -30,14 +30,23 @@ function encryptAES() {
         return;
     }
 
+    // Criptografar a mensagem
     const encrypted = CryptoJS.AES.encrypt(message, passphrase).toString();
+    
+    // Atualizar o campo de mensagem criptografada
     document.getElementById('encryptedMessage').value = encrypted;
+    
+    // Exibir notificação de sucesso
     showNotification('Mensagem criptografada com sucesso usando AES!', 'success');
+
+    // Limpar campos
+    document.getElementById('message').value = '';
+    document.getElementById('encryptionKey').value = '';
 }
 
 // Função para descriptografar usando AES
 function decryptAES() {
-    const encryptedMessage = document.getElementById('encryptedMessage').value;
+    const encryptedMessage = document.getElementById('encryptedInputMessage').value; // Campo de entrada de mensagem criptografada
     const passphrase = document.getElementById('decryptionKey').value;
 
     if (encryptedMessage === '' || passphrase === '') {
@@ -52,7 +61,7 @@ function decryptAES() {
         if (originalMessage === '') {
             showNotification('Falha na descriptografia. Verifique a chave secreta.', 'error');
         } else {
-            document.getElementById('message').value = originalMessage;
+            document.getElementById('decryptedMessage').value = originalMessage; // Atualizar o campo de mensagem descriptografada
             showNotification('Mensagem descriptografada com sucesso usando AES!', 'success');
         }
     } catch (error) {

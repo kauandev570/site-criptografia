@@ -66,6 +66,23 @@ textarea:focus {
     outline: none;
 }
 
+input[type="password"] {
+    width: 100%;
+    background-color: #444; /* Cor de fundo do campo */
+    color: #E0E0E0; /* Cor do texto */
+    border: 2px solid #00FFAB; /* Borda verde */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s ease; /* Transição suave na mudança de cor */
+}
+
+input[type="password"]:focus {
+    border-color: #00D79B; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão do navegador */
+    background-color: #555; /* Cor de fundo ao focar */
+}
+
 button {
     background-color: #00FFAB;
     color: #0D0D0D;

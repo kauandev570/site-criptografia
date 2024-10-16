@@ -14,12 +14,16 @@
             <textarea id="message" placeholder="Digite sua mensagem"></textarea>
             <input type="password" id="encryptionKey" placeholder="Digite sua chave secreta">
             <button onclick="encryptAES()">Criptografar com AES</button>
+            <h3>Mensagem Criptografada</h3>
+            <textarea id="encryptedMessage" placeholder="Mensagem criptografada" readonly></textarea> <!-- Campo para mensagem criptografada -->
         </div>
         <div class="section">
             <h2>Descriptografar</h2>
-            <textarea id="encryptedMessage" placeholder="Mensagem criptografada"></textarea>
+            <textarea id="encryptedInputMessage" placeholder="Mensagem criptografada"></textarea> <!-- Campo para entrada de mensagem criptografada -->
             <input type="password" id="decryptionKey" placeholder="Digite sua chave secreta">
             <button onclick="decryptAES()">Descriptografar com AES</button>
+            <h3>Mensagem Descriptografada</h3>
+            <textarea id="decryptedMessage" placeholder="Mensagem descriptografada" readonly></textarea> <!-- Campo para mensagem descriptografada -->
         </div>
     </div>
 
