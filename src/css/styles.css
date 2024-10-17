@@ -16,9 +16,9 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column; /* Muda a direção para coluna */
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
     width: 90%;
     max-width: 900px;
     gap: 30px;
@@ -29,8 +29,8 @@ body {
 }
 
 .section {
-    width: 100%; /* Garante que a seção ocupe toda a largura disponível */
-    min-width: 300px; /* Garante que as seções não fiquem muito pequenas */
+    width: 100%; 
+    min-width: 300px; 
     background-color: #2B2B2B;
     padding: 20px;
     border-radius: 10px;
@@ -60,7 +60,7 @@ textarea {
     font-size: 16px;
     resize: none;
     transition: background-color 0.3s ease;
-    margin-top: 20px; /* Adicionado para criar espaço acima das caixas de texto */
+    margin-top: 20px; 
 }
 
 textarea:focus {
@@ -118,29 +118,29 @@ footer {
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Altera a direção do layout para coluna em telas menores */
+        flex-direction: column; 
     }
 
     .section {
-        margin-bottom: 20px; /* Adiciona espaço entre as seções */
+        margin-bottom: 20px; 
     }
 
     h2 {
-        font-size: 1.5rem; /* Reduz o tamanho do título */
+        font-size: 1.5rem; 
     }
 
     button {
-        font-size: 14px; /* Ajusta o tamanho do botão */
+        font-size: 14px; 
     }
 }
 
 @media (max-width: 480px) {
     textarea {
-        height: 120px; /* Reduz a altura da área de texto */
-        font-size: 14px; /* Ajusta o tamanho da fonte */
+        height: 120px; 
+        font-size: 14px;
     }
 
     .key-input {
-        font-size: 14px; /* Ajusta o tamanho da fonte */
+        font-size: 14px; 
     }
 }
