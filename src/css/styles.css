@@ -5,19 +5,20 @@
 }
 
 body {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
     background-color: #0D0D0D; /* Fundo mais escuro */
     color: #E0E0E0;
     font-family: 'Roboto', sans-serif; /* Fonte moderna */
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Muda a direção para coluna */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
     width: 90%;
     max-width: 900px;
     gap: 30px;
@@ -25,11 +26,11 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 255, 171, 0.1);
-    position: relative;
 }
 
 .section {
-    flex: 1;
+    width: 100%; /* Garante que a seção ocupe toda a largura disponível */
+    min-width: 300px; /* Garante que as seções não fiquem muito pequenas */
     background-color: #2B2B2B;
     padding: 20px;
     border-radius: 10px;
@@ -59,6 +60,7 @@ textarea {
     font-size: 16px;
     resize: none;
     transition: background-color 0.3s ease;
+    margin-top: 20px; /* Adicionado para criar espaço acima das caixas de texto */
 }
 
 textarea:focus {
@@ -66,21 +68,21 @@ textarea:focus {
     outline: none;
 }
 
-input[type="password"] {
+.key-input {
+    background-color: #333;
+    color: #E0E0E0;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
     width: 100%;
-    background-color: #444; /* Cor de fundo do campo */
-    color: #E0E0E0; /* Cor do texto */
-    border: 2px solid #00FFAB; /* Borda verde */
-    border-radius: 8px; /* Bordas arredondadas */
-    padding: 10px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    transition: border-color 0.3s ease; /* Transição suave na mudança de cor */
 }
 
-input[type="password"]:focus {
-    border-color: #00D79B; /* Cor da borda ao focar */
-    outline: none; /* Remove o contorno padrão do navegador */
-    background-color: #555; /* Cor de fundo ao focar */
+.key-input:focus {
+    background-color: #444;
+    outline: none;
 }
 
 button {
@@ -111,4 +113,34 @@ footer {
     transform: translateX(-50%);
     font-size: 14px;
     color: #666;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Altera a direção do layout para coluna em telas menores */
+    }
+
+    .section {
+        margin-bottom: 20px; /* Adiciona espaço entre as seções */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    button {
+        font-size: 14px; /* Ajusta o tamanho do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    textarea {
+        height: 120px; /* Reduz a altura da área de texto */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    .key-input {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
 }

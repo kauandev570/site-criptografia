@@ -12,18 +12,18 @@
         <div class="section">
             <h2>Criptografar</h2>
             <textarea id="message" placeholder="Digite sua mensagem"></textarea>
-            <input type="password" id="encryptionKey" placeholder="Digite sua chave secreta">
+            <input type="password" id="encryptionKey" placeholder="Digite sua chave secreta" class="key-input">
             <button onclick="encryptAES()">Criptografar com AES</button>
-            <h3>Mensagem Criptografada</h3>
-            <textarea id="encryptedMessage" placeholder="Mensagem criptografada" readonly></textarea> <!-- Campo para mensagem criptografada -->
+            <textarea id="encryptedMessage" placeholder="Mensagem criptografada" readonly></textarea>
+            <button onclick="copyToClipboard('encryptedMessage')">Copiar Mensagem Criptografada</button>
         </div>
         <div class="section">
             <h2>Descriptografar</h2>
-            <textarea id="encryptedInputMessage" placeholder="Mensagem criptografada"></textarea> <!-- Campo para entrada de mensagem criptografada -->
-            <input type="password" id="decryptionKey" placeholder="Digite sua chave secreta">
+            <textarea id="encryptedInput" placeholder="Mensagem criptografada"></textarea>
+            <input type="password" id="decryptionKey" placeholder="Digite sua chave secreta" class="key-input">
             <button onclick="decryptAES()">Descriptografar com AES</button>
-            <h3>Mensagem Descriptografada</h3>
-            <textarea id="decryptedMessage" placeholder="Mensagem descriptografada" readonly></textarea> <!-- Campo para mensagem descriptografada -->
+            <textarea id="decryptedMessage" placeholder="Mensagem descriptografada" readonly></textarea>
+            <button onclick="copyToClipboard('decryptedMessage')">Copiar Mensagem Descriptografada</button>
         </div>
     </div>
 
