@@ -46,7 +46,7 @@ function encryptAES() {
 
 // Função para descriptografar usando AES
 function decryptAES() {
-    const encryptedMessage = document.getElementById('encryptedInputMessage').value; // Campo de entrada de mensagem criptografada
+    const encryptedMessage = document.getElementById('encryptedInput').value; // Campo de entrada de mensagem criptografada
     const passphrase = document.getElementById('decryptionKey').value;
 
     if (encryptedMessage === '' || passphrase === '') {
@@ -67,4 +67,19 @@ function decryptAES() {
     } catch (error) {
         showNotification('Erro na descriptografia. Verifique a chave secreta.', 'error');
     }
+}
+
+// Função para copiar o conteúdo de um elemento (campo de texto) para a área de transferência
+function copyToClipboard(elementId) {
+    const copyText = document.getElementById(elementId);
+    
+    // Selecionar o conteúdo do campo
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // Para dispositivos móveis
+    
+    // Copiar o texto para a área de transferência
+    document.execCommand("copy");
+    
+    // Exibir notificação de sucesso
+    showNotification('Mensagem copiada para a área de transferência!', 'success');
 }
