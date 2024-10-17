@@ -25,6 +25,29 @@
             <textarea id="decryptedMessage" placeholder="Mensagem descriptografada" readonly></textarea>
             <button onclick="copyToClipboard('decryptedMessage')">Copiar Mensagem Descriptografada</button>
         </div>
+
+        <!-- Início da seção de explicação -->
+        <div class="section">
+            <h2>Como Usar o Site</h2>
+            <p>Este site permite que você criptografe e descriptografe mensagens usando o algoritmo AES (Advanced Encryption Standard). Veja como é simples:</p>
+            
+            <h3><strong style="color: #00FFAB;">Criptografar uma Mensagem:</strong></h3>
+            <ul>
+                <li>No campo <strong>"Digite sua mensagem"</strong>, escreva a mensagem que você deseja criptografar.</li>
+                <li>No campo <strong>"Digite sua chave secreta"</strong>, insira uma chave secreta. Certifique-se de lembrar ou guardar essa chave.</li>
+                <li>Clique no botão <strong>"Criptografar com AES"</strong>. O site irá criptografar sua mensagem e o resultado aparecerá no campo <strong>"Mensagem criptografada"</strong>.</li>
+                <li>Para copiar a mensagem criptografada, clique no botão <strong>"Copiar Mensagem Criptografada"</strong>.</li>
+            </ul>
+            
+            <h3><strong style="color: #00FFAB;">Descriptografar uma Mensagem:</strong></h3>
+            <ul>
+                <li>No campo <strong>"Mensagem criptografada"</strong>, cole a mensagem criptografada que você deseja descriptografar.</li>
+                <li>No campo <strong>"Digite sua chave secreta"</strong>, insira a mesma chave secreta que foi usada para criptografar a mensagem.</li>
+                <li>Clique no botão <strong>"Descriptografar com AES"</strong>. Se a chave estiver correta, a mensagem original aparecerá no campo <strong>"Mensagem descriptografada"</strong>.</li>
+                <li>Caso queira copiar a mensagem descriptografada, clique em <strong>"Copiar Mensagem Descriptografada"</strong>.</li>
+            </ul>
+        </div>
+        <!-- Fim da seção de explicação -->
     </div>
 
     <script src="src/js/scripts.js"></script> <!-- Link para o arquivo JavaScript -->
