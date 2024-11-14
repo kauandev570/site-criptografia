@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criptografia de Mensagens com AES</title>
-    <link rel="stylesheet" href="src/css/styles.css"> <!-- Link para o arquivo CSS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script> <!-- Biblioteca CryptoJS -->
+    <link rel="stylesheet" href="src/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
     <div class="container">
+
+        <!-- Início da apresentação sobre criptografia -->
+        <div class="section">
+            <h2>Bem-vindo ao Site de Criptografia AES</h2>
+            <p>Este site foi desenvolvido para facilitar a proteção de mensagens importantes por meio da criptografia AES. Entenda abaixo os princípios da criptografia e a importância desse recurso para a segurança de dados.</p>
+
+            <h3>O Que é Criptografia?</h3>
+            <p>Criptografia é o processo de converter informações legíveis em um formato codificado, de modo que apenas pessoas autorizadas possam entender. Esse processo é fundamental para proteger a privacidade e garantir que dados sensíveis não sejam acessados por terceiros.</p>
+
+            <h3>Para Que é Usada a Criptografia?</h3>
+            <p>A criptografia é usada em diversas áreas, como transações bancárias, comunicações digitais, armazenamento em nuvem e muito mais. Sua função é assegurar que apenas o remetente e o destinatário legítimos possam acessar a informação enviada.</p>
+
+            <h3>Por Que Escolher o AES?</h3>
+            <p>O AES (Advanced Encryption Standard) é um dos algoritmos de criptografia mais populares e confiáveis do mundo. Ele foi desenvolvido para ser rápido e seguro, sendo adotado como padrão de criptografia por governos e empresas. Sua popularidade se deve à alta segurança e ao desempenho, tornando-o ideal para proteger dados sensíveis em uma variedade de aplicativos.</p>
+        </div>
+        <!-- Fim da apresentação sobre criptografia -->
+
+        <!-- Início da explicação sobre o funcionamento da criptografia -->
+        <div class="section">
+            <h2>Como Funciona o AES?</h2>
+            <p>O AES utiliza uma chave secreta para transformar uma mensagem comum em uma sequência aparentemente aleatória de caracteres. Somente quem possui essa chave pode decifrar a mensagem, garantindo a segurança dos dados. Ele é classificado como um algoritmo de criptografia simétrica, o que significa que a mesma chave é usada tanto para criptografar quanto para descriptografar a informação.</p>
+
+            <h3>Exemplos de Aplicações do AES</h3>
+            <ul>
+                <li>Proteção de transações financeiras online.</li>
+                <li>Segurança em comunicações entre dispositivos móveis.</li>
+                <li>Armazenamento seguro de dados em serviços de nuvem e servidores.</li>
+                <li>Proteção de informações sensíveis em dispositivos locais.</li>
+            </ul>
+            <p>O AES é amplamente utilizado devido à sua eficácia em manter a confidencialidade e integridade dos dados, mesmo contra tentativas avançadas de violação de segurança.</p>
+        </div>
+        <!-- Fim da explicação sobre o funcionamento da criptografia -->
+
+        <!-- Seção de criptografar -->
         <div class="section">
             <h2>Criptografar</h2>
             <textarea id="message" placeholder="Digite sua mensagem"></textarea>
@@ -17,6 +51,8 @@
             <textarea id="encryptedMessage" placeholder="Mensagem criptografada" readonly></textarea>
             <button onclick="copyToClipboard('encryptedMessage')">Copiar Mensagem Criptografada</button>
         </div>
+
+        <!-- Seção de descriptografar -->
         <div class="section">
             <h2>Descriptografar</h2>
             <textarea id="encryptedInput" placeholder="Mensagem criptografada"></textarea>
@@ -26,30 +62,28 @@
             <button onclick="copyToClipboard('decryptedMessage')">Copiar Mensagem Descriptografada</button>
         </div>
 
-        <!-- Início da seção de explicação -->
+        <!-- Seção de instruções -->
         <div class="section">
             <h2>Como Usar o Site</h2>
-            <p>Este site permite que você criptografe e descriptografe mensagens usando o algoritmo AES (Advanced Encryption Standard). Veja como é simples:</p>
+            <p>Este site permite que você criptografe e descriptografe mensagens usando o algoritmo AES. Veja como é simples:</p>
             
-            <h3><strong style="color: #00FFAB;">Criptografar uma Mensagem:</strong></h3>
+            <h3>Criptografar uma Mensagem</h3>
             <ul>
-                <li>No campo <strong>"Digite sua mensagem"</strong>, escreva a mensagem que você deseja criptografar.</li>
-                <li>No campo <strong>"Digite sua chave secreta"</strong>, insira uma chave secreta. Certifique-se de lembrar ou guardar essa chave.</li>
-                <li>Clique no botão <strong>"Criptografar com AES"</strong>. O site irá criptografar sua mensagem e o resultado aparecerá no campo <strong>"Mensagem criptografada"</strong>.</li>
-                <li>Para copiar a mensagem criptografada, clique no botão <strong>"Copiar Mensagem Criptografada"</strong>.</li>
+                <li>Digite sua mensagem e chave secreta.</li>
+                <li>Clique em "Criptografar com AES".</li>
+                <li>Copie a mensagem criptografada, se desejar.</li>
             </ul>
             
-            <h3><strong style="color: #00FFAB;">Descriptografar uma Mensagem:</strong></h3>
+            <h3>Descriptografar uma Mensagem</h3>
             <ul>
-                <li>No campo <strong>"Mensagem criptografada"</strong>, cole a mensagem criptografada que você deseja descriptografar.</li>
-                <li>No campo <strong>"Digite sua chave secreta"</strong>, insira a mesma chave secreta que foi usada para criptografar a mensagem.</li>
-                <li>Clique no botão <strong>"Descriptografar com AES"</strong>. Se a chave estiver correta, a mensagem original aparecerá no campo <strong>"Mensagem descriptografada"</strong>.</li>
-                <li>Caso queira copiar a mensagem descriptografada, clique em <strong>"Copiar Mensagem Descriptografada"</strong>.</li>
+                <li>Cole a mensagem criptografada e insira a mesma chave secreta.</li>
+                <li>Clique em "Descriptografar com AES".</li>
+                <li>Copie a mensagem descriptografada, se desejar.</li>
             </ul>
         </div>
-        <!-- Fim da seção de explicação -->
+
     </div>
 
-    <script src="src/js/scripts.js"></script> <!-- Link para o arquivo JavaScript -->
+    <script src="src/js/scripts.js"></script>
 </body>
 </html>
