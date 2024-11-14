@@ -9,28 +9,20 @@
 </head>
 <body>
     <div class="container">
-
-        <!-- Início da apresentação sobre criptografia -->
         <div class="section">
             <h2>Bem-vindo ao Site de Criptografia AES</h2>
             <p>Este site foi desenvolvido para facilitar a proteção de mensagens importantes por meio da criptografia AES. Entenda abaixo os princípios da criptografia e a importância desse recurso para a segurança de dados.</p>
-
             <h3>O Que é Criptografia?</h3>
             <p>Criptografia é o processo de converter informações legíveis em um formato codificado, de modo que apenas pessoas autorizadas possam entender. Esse processo é fundamental para proteger a privacidade e garantir que dados sensíveis não sejam acessados por terceiros.</p>
-
             <h3>Para Que é Usada a Criptografia?</h3>
             <p>A criptografia é usada em diversas áreas, como transações bancárias, comunicações digitais, armazenamento em nuvem e muito mais. Sua função é assegurar que apenas o remetente e o destinatário legítimos possam acessar a informação enviada.</p>
-
             <h3>Por Que Escolher o AES?</h3>
             <p>O AES (Advanced Encryption Standard) é um dos algoritmos de criptografia mais populares e confiáveis do mundo. Ele foi desenvolvido para ser rápido e seguro, sendo adotado como padrão de criptografia por governos e empresas. Sua popularidade se deve à alta segurança e ao desempenho, tornando-o ideal para proteger dados sensíveis em uma variedade de aplicativos.</p>
         </div>
-        <!-- Fim da apresentação sobre criptografia -->
 
-        <!-- Início da explicação sobre o funcionamento da criptografia -->
         <div class="section">
             <h2>Como Funciona o AES?</h2>
             <p>O AES utiliza uma chave secreta para transformar uma mensagem comum em uma sequência aparentemente aleatória de caracteres. Somente quem possui essa chave pode decifrar a mensagem, garantindo a segurança dos dados. Ele é classificado como um algoritmo de criptografia simétrica, o que significa que a mesma chave é usada tanto para criptografar quanto para descriptografar a informação.</p>
-
             <h3>Exemplos de Aplicações do AES</h3>
             <ul>
                 <li>Proteção de transações financeiras online.</li>
@@ -40,9 +32,7 @@
             </ul>
             <p>O AES é amplamente utilizado devido à sua eficácia em manter a confidencialidade e integridade dos dados, mesmo contra tentativas avançadas de violação de segurança.</p>
         </div>
-        <!-- Fim da explicação sobre o funcionamento da criptografia -->
 
-        <!-- Seção de criptografar -->
         <div class="section">
             <h2>Criptografar</h2>
             <textarea id="message" placeholder="Digite sua mensagem"></textarea>
@@ -52,7 +42,6 @@
             <button onclick="copyToClipboard('encryptedMessage')">Copiar Mensagem Criptografada</button>
         </div>
 
-        <!-- Seção de descriptografar -->
         <div class="section">
             <h2>Descriptografar</h2>
             <textarea id="encryptedInput" placeholder="Mensagem criptografada"></textarea>
@@ -62,18 +51,15 @@
             <button onclick="copyToClipboard('decryptedMessage')">Copiar Mensagem Descriptografada</button>
         </div>
 
-        <!-- Seção de instruções -->
         <div class="section">
             <h2>Como Usar o Site</h2>
             <p>Este site permite que você criptografe e descriptografe mensagens usando o algoritmo AES. Veja como é simples:</p>
-            
             <h3>Criptografar uma Mensagem</h3>
             <ul>
                 <li>Digite sua mensagem e chave secreta.</li>
                 <li>Clique em "Criptografar com AES".</li>
                 <li>Copie a mensagem criptografada, se desejar.</li>
             </ul>
-            
             <h3>Descriptografar uma Mensagem</h3>
             <ul>
                 <li>Cole a mensagem criptografada e insira a mesma chave secreta.</li>
@@ -81,8 +67,11 @@
                 <li>Copie a mensagem descriptografada, se desejar.</li>
             </ul>
         </div>
-
     </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2024 Kauan Portugal. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="src/js/scripts.js"></script>
 </body>
